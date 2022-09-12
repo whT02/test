@@ -42,6 +42,12 @@
             <scope>system</scope>
             <systemPath>${basedir}/libs/jsqlparser-4.6-SNAPSHOT.jar</systemPath>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
     </dependencies>
 
 
