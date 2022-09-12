@@ -34,12 +34,12 @@ public class UrlRedirectSanitizerHandler implements ConstructorSanitizerHandler{
                         .needRecord(true)
                         .exceptionMethod(method)
                         .exceptionClass(className)
-                        .exceptionDesc("初始化连接的URl中存在非http/http协议，可能通过file://等协议造成文件泄露，或初始化url中包含重定向网址，可能存在SSRF漏洞，建议对载入url设置白名单！")
+                        .exceptionDesc("初始化url可重定向其他网址，可能存在URL重定向漏洞，建议对载入url设置白名单！")
                         .requestParam(Arrays.toString(args))
                         .stackInfo(Arrays.toString(stackTraceElements))
-                        .exceptionName("SSRF Injection")
+                        .exceptionName("URL Redirect")
                         .methodLine(methodLine)
-                        .exceptionId("11")
+                        .exceptionId("12")
                         .build();
             }
         }
